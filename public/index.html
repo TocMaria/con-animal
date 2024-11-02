@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitrine de Adoção - Todos os Animais</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Todos os Animais para Adoção</h1>
+
+  <!-- Link para adicionar novo animal -->
+  <a href="addAnimal.html" class="button">Adicionar Novo Animal</a>
+
+  <!-- Lista de animais -->
+  <section id="animals-list-section">
+    <h2>Animais Disponíveis</h2>
+    <ul id="animals-list"></ul>
+  </section>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Carregar e exibir todos os animais
+    document.addEventListener('DOMContentLoaded', loadAnimals);
+  </script>
+</body>
+</html>

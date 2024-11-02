@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Animal</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Editar Animal</h1>
+
+  <!-- Formulário para editar um animal -->
+  <form id="edit-animal-form">
+    <input type="text" id="species" placeholder="Espécie" required>
+    <input type="text" id="name" placeholder="Nome do Animal" required>
+    <input type="text" id="sex" placeholder="Sexo" required>
+    <input type="number" id="age" placeholder="Idade Aproximada" required>
+    <input type="number" id="weight" placeholder="Peso Aproximado" required>
+    <button type="submit">Salvar Alterações</button>
+  </form>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Carregar e salvar alterações do animal
+    document.addEventListener('DOMContentLoaded', loadAnimalData);
+    document.getElementById('edit-animal-form').addEventListener('submit', updateAnimal);
+  </script>
+</body>
+</html>
