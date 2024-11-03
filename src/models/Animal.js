@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
 const veterinaryRecordSchema = new mongoose.Schema({
-  type: { type: String, required: true }, // tipo de vermífugo ou vacina
-  date: { type: Date, required: true }, // data da aplicação
-  veterinarian: { type: String, required: true }, // responsável veterinário
+  type: { type: String}, // tipo de vermífugo ou vacina
+  date: { type: Date}, // data da aplicação
+  veterinarian: { type: String}, // responsável veterinário
   allergies: { type: String }, // alergias do animal
   comorbidities: { type: String } // comorbidades do animal
 }, { _id: false }); // não criar um ID para subdocumentos
 
 const animalSchema = new mongoose.Schema({
-  species: { type: String, required: true },
+  species: { type: String, enum: ['Cachorro', 'Gato', 'Outros'], required: true },
   name: { type: String, required: true },
   sex: { type: String, enum: ['M', 'F'], required: true },
   age: { type: Number, required: true },
