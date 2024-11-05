@@ -50,6 +50,25 @@ exports.getAnimals = async (req, res) => {
   }
 };
 
+exports.getAllAnimals = async (req, res) => {
+  try {
+    const animals = await Animal.find();
+    res.status(200).json(animals);
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar todos os animais' });
+  }
+};
+
+// Função genérica para buscar animais por espécie
+exports.getAnimalsBySpecies = (species) => async (req, res) => {
+  try {
+    const animals = await Animal.find({ species });
+    res.status(200).json(animals);
+  } catch (error) {
+    res.status(500).json({ error: `Erro ao buscar animais da espécie ${species}` });
+  }
+};
+
 exports.getAnimalById = async (req, res) => {
   try {
     const { id } = req.params;
