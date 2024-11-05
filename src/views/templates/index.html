@@ -16,8 +16,6 @@
       <img src="../../../public/images/logo.png" width="50" height="50" alt="Logo Con Animal" />
       <h1 class="sitename">Con Animal</h1>
     </a>
-
-    <h2>MEU HEADER EJS</h2>
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -43,13 +41,17 @@
       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
       <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
     </div>
+    <div id="user-data" style="display: none;">
+      <P>Usuário Logado</P>
+      <button onclick="logout()">Logout</button>
+    </div>
   </div>
   </header>
 
   <h1>Todos os Animais para Adoção</h1>
 
   <!-- Link para adicionar novo animal -->
-  <a href="addAnimal.html" class="button">Adicionar Novo Animal</a>
+  <a href="addAnimal.html" id="add-animal-btn" class="button" style="display: none;">Adicionar Novo Animal</a>
 
   <!-- Lista de animais -->
   <section id="animals-list-section">
@@ -58,6 +60,7 @@
   </section>
 
   <script src="../js/app.js"></script>
+  <script src="../js/loggedIn.js"></script>
   <script>
     // Carregar e exibir todos os animais
     document.addEventListener('DOMContentLoaded', loadAnimals);

@@ -1,26 +1,38 @@
-// login.js
-const BASE_URL = 'http://localhost:3000';
-
-document.getElementById('loginForm').addEventListener('submit', async (event) => {
+document.getElementById('login-form').addEventListener('submit', async function (event) {
   event.preventDefault();
+
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
 
+  const loginData = { username, password };
+
   try {
-    const response = await fetch(`${BASE_URL}/login`, {
+    const response = await fetch('http://localhost:3000/user/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify(loginData)
     });
-    const data = await response.json();
 
+    const responseData = await response.json();
+
+    const loginResponse = document.getElementById('login-response');
     if (response.ok) {
-      localStorage.setItem('token', data.token);
-      window.location.href = 'index.html';
+      loginResponse.textContent = responseData.message;
+      loginResponse.style.color = 'green';
+
+      // Salva o token no localStorage para uso posterior
+      localStorage.setItem('token', responseData.token);
+
+      // Redireciona para outra página após login (opcional)
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 2000);
     } else {
-      console.error(data.error);
+      loginResponse.textContent = responseData.error || 'Erro ao fazer login';
+      loginResponse.style.color = 'red';
     }
   } catch (error) {
-    console.error('Erro ao logar:', error);
+    console.error('Erro:', error);
+    document.getElementById('login-response').textContent = 'Erro ao conectar com o servidor';
   }
 });
