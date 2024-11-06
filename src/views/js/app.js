@@ -34,11 +34,11 @@ async function loadAnimals() {
 
         <div class="meta d-flex align-items-center">
           <div class="d-flex align-items-center">
-            <i class="bi bi-person"></i> <span class="ps-2">${animal.weight}kg</span>
+            <h3 class="ps-2">${animal.weight}kg</h3>
           </div>
           <span class="px-3 text-black-50">/</span>
           <div class="d-flex align-items-center">
-            <i class="bi bi-folder2"></i> <span class="ps-2">${animal.age} anos</span>
+            <h3 class="ps-2">${animal.age} anos</h3>
           </div>
         </div>
 
@@ -49,8 +49,10 @@ async function loadAnimals() {
         <hr>
 
         <a href="blog-details.html" class="readmore"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-        <a href="editAnimal.html?id=${animal._id}" class="button edit-btn">Editar</a>
-        <button onclick="deleteAnimal('${animal._id}')" class="delete-btn">Deletar</button>
+        <div class="text-center mt-2">
+        <a href="editAnimal.html?id=${animal._id}" class="button edit-btn btn btn-primary"><i class="bi bi-pencil"></i> Editar</a>
+        <button onclick="deleteAnimal('${animal._id}')" class="delete-btn btn btn-secondary"> <i class="bi bi-trash"></i> Deletar</button>
+        </div>
         </div>
       </article>
         `;
