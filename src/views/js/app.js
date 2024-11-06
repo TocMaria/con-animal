@@ -4,7 +4,12 @@ const BASE_URL = 'http://localhost:3000';
 // Carregar todos os animais
 async function loadAnimals() {
   try {
-    const response = await fetch(`${BASE_URL}/animals`);
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('cg') ? urlParams.get('cg') : 'all';
+
+    var urlB = `${BASE_URL}/animals/${category}`; 
+
+    const response = await fetch(`${BASE_URL}/animals/${category}`);
     const animals = await response.json();
 
     const animalsList = document.getElementById('animals-list');
@@ -43,10 +48,10 @@ async function loadAnimals() {
 
         <hr>
 
-        <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+        <a href="blog-details.html" class="readmore"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
         <a href="editAnimal.html?id=${animal._id}" class="button edit-btn">Editar</a>
-          <button onclick="deleteAnimal('${animal._id}')" class="delete-btn">Deletar</button>
-      </div>
+        <button onclick="deleteAnimal('${animal._id}')" class="delete-btn">Deletar</button>
+        </div>
       </article>
         `;
         animalsList.appendChild(newPost);
@@ -96,28 +101,3 @@ async function loadAnimals() {
   }
 }
 
-
-// Carregar dados do animal para edição
-async function loadAnimalData() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get('id');
-
-  if (id) {
-    try {
-      const response = await fetch(`${BASE_URL}/animals/${id}`);
-      if (!response.ok) {
-         console.error('Erro ao buscar dados do animal status: {0} \n url: {1}', response.status, `${BASE_URL}/animals/${id}`);
-      }
-
-      const animal = await response.json();
-
-      document.getElementById('species').value = animal.species;
-      document.getElementById('name').value = animal.name;
-      document.getElementById('sex').value = animal.sex;
-      document.getElementById('age').value = animal.age;
-      document.getElementById('weight').value = animal.weight;
-    } catch (error) {
-      console.error('Erro ao carregar dados do animal:', error);
-    }
-  }
-}

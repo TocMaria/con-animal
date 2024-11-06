@@ -1,3 +1,30 @@
+const BASE_URL = 'http://localhost:3000';
+
+// Carregar dados do animal para edição
+async function loadAnimalData() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get('id');
+
+  if (id) {
+    try {
+      const response = await fetch(`${BASE_URL}/animals/${id}`);
+      if (!response.ok) {
+         console.error('Erro ao buscar dados do animal status: {0} \n url: {1}', response.status, `${BASE_URL}/animals/${id}`);
+      }
+
+      const animal = await response.json();
+
+      document.getElementById('species').value = animal.species;
+      document.getElementById('name').value = animal.name;
+      document.getElementById('sex').value = animal.sex;
+      document.getElementById('age').value = animal.age;
+      document.getElementById('weight').value = animal.weight;
+    } catch (error) {
+      console.error('Erro ao carregar dados do animal:', error);
+    }
+  }
+}
+
 // Atualizar animal
 async function updateAnimal(event) {
   event.preventDefault();
