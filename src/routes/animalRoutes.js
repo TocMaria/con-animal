@@ -14,7 +14,11 @@ router.get('/others', AnimalController.getAnimalsBySpecies('Outros'));
 router.post('/', upload.fields([{ name: 'profile_photo', maxCount: 1 }, { name: 'gallery_public', maxCount: 10 }, { name: 'gallery_private', maxCount: 10 }]), AnimalController.registerAnimal);
 router.get('/', AnimalController.getAnimals);
 router.get('/:id', AnimalController.getAnimalById);
-router.put('/:id', AnimalController.updateAnimal);
+router.put('/editar/:id', upload.fields([
+  { name: 'profile_photo', maxCount: 1 },
+  { name: 'gallery_public', maxCount: 10 },
+  { name: 'gallery_private', maxCount: 10 }
+]), AnimalController.updateAnimal);
 router.delete('/:id', AnimalController.deleteAnimal);
 
 module.exports = router;

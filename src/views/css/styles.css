@@ -43,3 +43,8 @@ button:hover {
 #animals-list li button {
   margin-top: 5px;
 } */
+
+.img-small {
+  max-width: 100px;
+  height: auto;
+}

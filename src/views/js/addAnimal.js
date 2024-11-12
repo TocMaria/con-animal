@@ -22,3 +22,5 @@ async function addAnimal(event) {
     console.error('Erro ao adicionar animal:', error);
   }
 }
+
+document.getElementById('add-animal-form').addEventListener('submit', addAnimal);
