@@ -3,20 +3,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const addAnimalBtn = document.getElementById('add-animal-btn');
   const editBtns = document.querySelectorAll('.edit-btn');
   const deleteBtns = document.querySelectorAll('.delete-btn');
-  
+  const userNameDisplay = document.querySelectorAll('.user-name');
+
   // Verificar se o usuário está logado
   const token = localStorage.getItem('token');
-  if (token) {
-    // Se o token existir, mostrar os botões
-    addAnimalBtn.style.display = 'block';
-    userDataDiv.style.display = 'block';
-    try {
-      editBtns.forEach(btnE => btnE.style.display = 'block');
-      deleteBtns.forEach(btnD => btnD.style.display = 'block');
-    } catch (e) {
-      console.log(e)
-    }
+  if (!token) return;
+  
+  if (userDataDiv) {
+    userDataDiv.classList.remove('d-none');
+    userDataDiv.style.display = 'flex';
   }
+
+  if (addAnimalBtn) {
+    addAnimalBtn.classList.remove('d-none');
+    addAnimalBtn.style.display = 'block';
+  }
+
+  if (userNameDisplay) {
+    userNameDisplay.textContent = localStorage.getItem('userName') || '';
+  }
+
+  editBtns.forEach(btn => {
+    if (btn) btn.classList.remove('d-none');
+  });
+
+  deleteBtns.forEach(btn => {
+    if (btn) btn.classList.remove('d-none');
+  });
 });
 
 function logout() {

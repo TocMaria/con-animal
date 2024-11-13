@@ -32,7 +32,7 @@
     </a>
     <nav id="navmenu" class="navmenu">
       <ul>
-        <div id="user-data" class="d-md-flex d-lg-none align-items-center" style="display: none;">
+        <div id="user-data" class="d-md-flex d-lg-none align-items-center d-none">
           <i class="bi bi-person"></i> <span class="ps-2">Usuário Logado</span>
           <button onclick="logout()">Logout</button>
         </div>
@@ -50,14 +50,13 @@
           </li>
           <li><a href="about.html">Sobre Nós</a></li>
           <li><a href="denounce.html">Denúncia</a></li>
-          <li><a href="contact.html">Contato</a></li>
           <li><a href="login.html">Login</a></li>
       </ul>
       <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>
 
     <div class="header-social-links">
-      <div id="user-data" class="d-md-none d-sm-none d-lg-flex align-items-center" style="display: none;">
+      <div id="user-data" class="d-md-none d-sm-none d-lg-flex align-items-center d-none">
         <i class="bi bi-person"></i> <span class="ps-2">Usuário Logado</span>
         <button onclick="logout()">Logout</button>
       </div>
@@ -290,6 +289,8 @@
 
   <script src="../js/editAnimal.js"></script>
   <script src="../js/addVetRecord.js"></script>
+  <script src="../js/loggedIn.js"></script>
+
 
 </body>
 </html>

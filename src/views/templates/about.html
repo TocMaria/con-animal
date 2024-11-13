@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  
+    <!--Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+    <link href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="../../../node_modules//swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/styles.css"> 
+  </head>
+
+<body class="about-page">
+ 
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div
+    class="container position-relative d-flex align-items-center justify-content-between"
+  >
+    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img src="../../../public/images/logo.png" width="50" height="50" alt="Logo Con Animal" />
+      <h1 class="sitename">Con Animal</h1>
+    </a>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <div id="user-data" class="d-md-flex d-lg-none align-items-center d-none">
+          <i class="bi bi-person"></i> <span class="ps-2">Usuário Logado</span>
+          <button onclick="logout()">Logout</button>
+        </div>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li class="dropdown">
+          <a href="index.html?cg=all"
+          ><span>Animais</span>
+          <i class="bi bi-chevron-down toggle-dropdown"></i
+            ></a>
+            <ul>
+              <li><a href="index.html?cg=dogs">Cachorros</a></li>
+              <li><a href="index.html?cg=cats">Gatos</a></li>
+              <li><a href="index.html?cg=others">Outros</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">Sobre Nós</a></li>
+          <li><a href="denounce.html">Denúncia</a></li>
+          <li><a href="login.html">Login</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <div class="header-social-links">
+      <div id="user-data" class="d-md-none d-sm-none d-lg-flex align-items-center d-none">
+        <i class="bi bi-person"></i> <span class="ps-2">Usuário Logado</span>
+        <button onclick="logout()">Logout</button>
+      </div>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Con Animal</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li class="current">Sobre nós</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p class="who-we-are">Quem somos</p>
+            <h3>Há 18 anos salvando vidas</h3>
+            <p class="text-justify">    A Sociedade Concordiense de Ajuda e Proteção Animal, mais conhecida como Con Animal, é uma Organização Não Governamental (ONG) sem fins lucrativos, fundada em 2006 com o propósito de resgatar, cuidar e promover a adoção de cães e gatos domésticos em situação de vulnerabilidade. Localizada em Concórdia, Santa Catarina, a ONG abriga atualmente cerca de <span class="font-weight-bold">250 animais</span> em lares temporários e coordena encaminhamentos para tratamentos veterinários, além de iniciativas de conscientização e castração.
+            </p>
+            <p>Principais Atividades da Con Animal:</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Resgate e acolhimento de cães e gatos em situação de risco.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Encaminhamento de animais para atendimento clínico veterinário.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Manutenção de lares temporários para cerca de 250 animais.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Projetos de conscientização sobre cuidados e adoção responsável.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Campanhas de castração para controle populacional de animais.</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <img src="../../../public/images/about-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6">
+                <div class="row gy-4">
+                  <div class="col-lg-12">
+                    <img src="../../../public/images/about-2.jpg" class="img-fluid" alt="">
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="../../../public/images/about-3.jpg" class="img-fluid" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <div class="section-title-container d-flex align-items-center justify-content-between">
+          <h2>Como Ajudar</h2>
+          <p>"Nenhum gesto de gentileza, por menor que seja, é perdido." -Esopo</p>
+        </div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Faça uma doação</h4>
+                <span>Chief Executive Officer</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Seja um voluntário</h4>
+                <span>Product Manager</span>
+                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Nossos pontos de coleta</h4>
+                <span>CTO</span>
+                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Campanhas</h4>
+                <span>Accountant</span>
+                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-linkedin"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Team Section -->
+
+  </main>
+
+  <script src="../js/loggedIn.js"></script>
+
+  </body>
+
+</html>

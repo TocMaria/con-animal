@@ -3,10 +3,7 @@ Projeto TCC
 
 TO-DO:
 Tela detalhes do animal
-Visual tela Login
-Header usuário logado, header não abre menu em telas pequenas
-Editar registro: problema com as imagens e ficha veterinaria
-Criar telas "Institucionais"
+Header não abre menu em telas pequenas
 Equalizar telas
 
 

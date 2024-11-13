@@ -22,7 +22,7 @@ document.getElementById('login-form').addEventListener('submit', async function 
 
       // Salva o token no localStorage para uso posterior
       localStorage.setItem('token', responseData.token);
-
+      localStorage.setItem('userName', username);
       // Redireciona para outra página após login (opcional)
       setTimeout(() => {
         window.location.href = 'index.html';
