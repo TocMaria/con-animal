@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (userNameDisplay) {
-    userNameDisplay.textContent = localStorage.getItem('userName') || '';
+    userNameDisplay.forEach(userD => {userD.textContent = localStorage.getItem('userName') || ''});
   }
 
   editBtns.forEach(btn => {
@@ -36,3 +36,15 @@ function logout() {
   localStorage.removeItem('token');
   window.location.reload(); // Ou redirecione para a página de login
 }
+
+  /**
+   * Mobile nav toggle
+   */
+  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+
+  function mobileNavToogle() {
+    document.querySelector('body').classList.toggle('mobile-nav-active');
+    mobileNavToggleBtn.classList.toggle('bi-list');
+    mobileNavToggleBtn.classList.toggle('bi-x');
+  }
+  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);

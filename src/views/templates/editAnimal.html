@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Registro</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-  
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  
-    <!--Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
-    <link href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
-  
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/styles.css">
-  </head>
-<body>  
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Registro</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+
+  <!--Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <link href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
   <header id="header" class="header d-flex align-items-center sticky-top">
-    <div
-    class="container position-relative d-flex align-items-center justify-content-between"
-  >
-    <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="../../../public/images/logo.png" width="50" height="50" alt="Logo Con Animal" />
-      <h1 class="sitename">Con Animal</h1>
-    </a>
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <div id="user-data" class="d-md-flex d-lg-none align-items-center d-none">
-          <i class="bi bi-person"></i> <span class="ps-2">Usuário Logado</span>
-          <button onclick="logout()">Logout</button>
-        </div>
-        <li><a href="index.html">Página Inicial</a></li>
-        <li class="dropdown">
-          <a href="index.html?cg=all"
-          ><span>Animais</span>
-          <i class="bi bi-chevron-down toggle-dropdown"></i
-            ></a>
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="../../../public/images/logo.png" width="60" height="60" alt="Logo Con Animal" />
+        <h1 class="sitename">Con Animal</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <!-- <div id="user-data" class="d-md-flex d-lg-none align-items-center d-none">
+        <i class="bi bi-person"></i> <span class="ps-2">Usuário Logado</span>
+        <button onclick="logout()">Logout</button>
+      </div> -->
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li class="dropdown">
+            <a href="index.html?cg=all"><span>Animais</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="index.html?cg=dogs">Cachorros</a></li>
               <li><a href="index.html?cg=cats">Gatos</a></li>
@@ -51,19 +55,23 @@
           <li><a href="about.html">Sobre Nós</a></li>
           <li><a href="denounce.html">Denúncia</a></li>
           <li><a href="login.html">Login</a></li>
-      </ul>
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-    </nav>
+          <li id="user-data" class="d-md-flex d-lg-none align-items-center justify-content-center d-none mt-4"> <i
+              class="bi bi-person"></i> <span class="px-2 user-name">Usuário Logado</span>
+            <button onclick="logout()" class="btn btn-secondary mr-2">Logout</button>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
-    <div class="header-social-links">
-      <div id="user-data" class="d-md-none d-sm-none d-lg-flex align-items-center d-none">
-        <i class="bi bi-person"></i> <span class="ps-2">Usuário Logado</span>
-        <button onclick="logout()">Logout</button>
+      <div class="header-social-links">
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <div id="user-data" class="d-md-none d-sm-none d-lg-flex align-items-center d-none">
+        <i class="bi bi-person"></i> <span class="px-2 user-name">Usuário Logado</span>
+        <button onclick="logout()" class="btn btn-secondary mr-2">Logout</button>
+      </div>
     </div>
-  </div>
   </header>
   <main class="main">
 
@@ -82,7 +90,7 @@
 
     <div class="container">
       <div>
-      </br>
+        </br>
         <form id="edit-animal-form" method="POST" enctype="multipart/form-data">
           <div class="form-group row">
             <label for="name" class="col-md-3 col-form-label">*Nome:</label>
@@ -90,7 +98,7 @@
               <input type="text" id="name" name="name" class="form-control" required>
               <div class="invalid-feedback">Por favor, insira o nome.</div>
             </div>
-          <!-- </div>
+            <!-- </div>
 
           <div class="form-group row"> -->
             <label for="species" class="col-md-3 col-form-label">*Espécie:</label>
@@ -101,8 +109,8 @@
                 <option value="Outros">Outros</option>
               </select>
             </div>
-          </div>        
-        
+          </div>
+
           <div class="form-group row">
             <label class="col-md-3 col-form-label">*Sexo:</label>
             <div class="col-md-3 d-flex align-items-center">
@@ -115,7 +123,7 @@
                 <label for="sex_femea" class="form-check-label">Fêmea</label>
               </div>
             </div>
-          <!-- </div>
+            <!-- </div>
         
           <div class="form-group row"> -->
             <label for="age" class="col-md-3 col-form-label">*Idade Aproximada (em anos):</label>
@@ -123,13 +131,13 @@
               <input type="number" id="age" name="age" class="form-control" required>
             </div>
           </div>
-        
+
           <div class="form-group row">
             <label for="weight" class="col-md-3 col-form-label">*Peso Aproximado (em kg):</label>
             <div class="col-md-3">
               <input type="number" id="weight" name="weight" class="form-control" required>
             </div>
-          <!-- </div>
+            <!-- </div>
         
           <div class="form-group row"> -->
             <label for="size" class="col-md-3 col-form-label">*Porte:</label>
@@ -143,13 +151,13 @@
               </select>
             </div>
           </div>
-                  
+
           <div class="form-group row">
             <label for="rescue_location" class="col-md-3 col-form-label">*Local do Resgate:</label>
             <div class="col-md-3">
               <input type="text" id="rescue_location" name="rescue_location" class="form-control" required>
             </div>
-          <!-- </div>
+            <!-- </div>
 
           <div class="form-group row"> -->
             <label for="rescue_date" class="col-md-3 col-form-label">*Data do Resgate:</label>
@@ -157,32 +165,32 @@
               <input type="date" id="rescue_date" name="rescue_date" class="form-control" required>
             </div>
           </div>
-        </br>
+          </br>
           <div class="form-group row">
             <label for="profile_photo" class="col-md-4 col-form-label">Foto de Perfil (URL):</label>
             <div class="col-md-8 d-flex align-items-start flex-wrap">
-            <!-- <div class="post-img position-relative overflow-hidden"> -->
+              <!-- <div class="post-img position-relative overflow-hidden"> -->
               <!-- </div> -->
               <input type="file" id="profile_photo" data-src="" name="profile_photo" class="form-control">
               <img id="profile_photo_pc" src="#" class="img-small" alt="">
             </div>
           </div>
-        
+
           <div class="form-group row">
             <label for="gallery_public" class="col-md-4 col-form-label">Galeria de Imagens Pública:</label>
             <div class="col-md-8">
               <input type="file" id="gallery_public" data-src="" name="gallery_public" class="form-control" multiple>
             </div>
           </div>
-        
+
           <div class="form-group row">
             <label for="gallery_private" class="col-md-4 col-form-label">Galeria de Imagens Privada:</label>
             <div class="col-md-8">
               <input type="file" id="gallery_private" data-src="" name="gallery_private" class="form-control" multiple>
             </div>
           </div>
-        
-        </br>
+
+          </br>
           <div class="form-group row">
             <label for="status" class="col-md-3 col-form-label">*Status:</label>
             <div class="col-md-3">
@@ -193,7 +201,7 @@
                 <option value="disponível">Disponível</option>
               </select>
             </div>
-          <!-- </div>
+            <!-- </div>
           
           <div class="form-group row"> -->
             <label for="last_location" class="col-md-3 col-form-label">Última Localização:</label>
@@ -201,7 +209,7 @@
               <input type="text" id="last_location" name="last_location" class="form-control">
             </div>
           </div>
-        
+
           <div class="form-group row">
             <label class="col-md-3 col-form-label">Castrado:</label>
             <div class="col-md-3 d-flex align-items-center">
@@ -214,7 +222,7 @@
                 <label for="castrated_false" class="form-check-label">Não</label>
               </div>
             </div>
-          <!-- </div>
+            <!-- </div>
         
           <div class="form-group row"> -->
             <label for="chip_code" class="col-md-3 col-form-label">Código do Chip:</label>
@@ -222,8 +230,8 @@
               <input type="text" id="chip_code" name="chip_code" class="form-control">
             </div>
           </div>
-        
-        </br>
+
+          </br>
           <h3>Ficha Veterinária</h3>
           <div id="veterinary-records">
             <div class="form-group row">
@@ -231,7 +239,7 @@
               <div class="col-md-3">
                 <input type="text" id="vet_type" name="veterinary_records[0][type]" class="form-control">
               </div>
-            <!-- </div>
+              <!-- </div>
           
             <div class="form-group row"> -->
               <label for="vet_date" class="col-md-3 col-form-label">Data:</label>
@@ -239,53 +247,75 @@
                 <input type="date" id="vet_date" name="veterinary_records[0][date]" class="form-control">
               </div>
             </div>
-          
+
             <div class="form-group row">
               <label for="vet_veterinarian" class="col-md-3 col-form-label">Veterinário Responsável:</label>
               <div class="col-md-9">
-                <input type="text" id="vet_veterinarian" name="veterinary_records[0][veterinarian]" class="form-control">
+                <input type="text" id="vet_veterinarian" name="veterinary_records[0][veterinarian]"
+                  class="form-control">
               </div>
             </div>
-          
+
             <div class="form-group row">
               <label for="vet_allergies" class="col-md-3 col-form-label">Alergias:</label>
               <div class="col-md-9">
                 <input type="text" id="vet_allergies" name="veterinary_records[0][allergies]" class="form-control">
               </div>
             </div>
-          
+
             <div class="form-group row">
               <label for="vet_comorbidities" class="col-md-3 col-form-label">Comorbidades:</label>
               <div class="col-md-9">
-                <input type="text" id="vet_comorbidities" name="veterinary_records[0][comorbidities]" class="form-control">
+                <input type="text" id="vet_comorbidities" name="veterinary_records[0][comorbidities]"
+                  class="form-control">
               </div>
             </div>
           </div>
-          
+
           <div class="form-group row">
             <div class="col-md-12 text-center">
-              <button type="button" class="btn btn-secondary" onclick="addVeterinaryRecord()">Adicionar Registro Veterinário</button>
+              <button type="button" class="btn btn-secondary" onclick="addVeterinaryRecord()">Adicionar Registro
+                Veterinário</button>
             </div>
           </div>
-          
+
           <div class="form-group row">
             <label for="history" class="col-md-3 col-form-label">Histórico de Saúde e Tratamentos:</label>
             <div class="col-md-9">
               <textarea id="history" name="history" class="form-control"></textarea>
             </div>
           </div>
-          
-        
+
+
           <div class="form-group row">
             <div class="col-md-12 text-center">
-              <button type="submit" class="btn btn-primary" >Salvar Alterações</button>
+              <button type="submit" class="btn btn-primary">Salvar Alterações</button>
             </div>
           </div>
         </form>
-  </div>
-</div>
-    
+      </div>
+    </div>
+
   </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Con Animal - MIT</strong> <span>All Rights
+          Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> and modified by <strong>Maria Isabel
+          Tochetto</strong>
+        <br>
+        <span>Back-end developed by <strong>Maria Isabel Tochetto</strong></span>
+      </div>
+    </div>
+
+  </footer>
 
   <script src="../js/editAnimal.js"></script>
   <script src="../js/addVetRecord.js"></script>
@@ -293,4 +323,5 @@
 
 
 </body>
+
 </html>

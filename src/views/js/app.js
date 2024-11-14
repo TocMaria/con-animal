@@ -9,11 +9,15 @@ async function loadAnimals() {
 
     var urlB = `${BASE_URL}/animals/${category}`; 
 
-    const response = await fetch(`${BASE_URL}/animals/${category}`);
+    const response = await fetch(urlB);
     const animals = await response.json();
 
     const animalsList = document.getElementById('animals-list');
     animalsList.innerHTML = '';
+
+    if (category && category != 'all') {
+      document.getElementById("cat-title").textContent = category === 'dogs' ? 'Animais - Cachorros' : category === 'cats' ? 'Animais - Gatos' : 'Animais - Outros';      
+    }
 
     const token = localStorage.getItem('token');
     if (token) {

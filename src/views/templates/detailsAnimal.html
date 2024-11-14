@@ -35,16 +35,17 @@
 <body>
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
+
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="../../../public/images/logo.png" width="50" height="50" alt="Logo Con Animal" />
+        <img src="../../../public/images/logo.png" width="60" height="60" alt="Logo Con Animal" />
         <h1 class="sitename">Con Animal</h1>
       </a>
       <nav id="navmenu" class="navmenu">
+        <!-- <div id="user-data" class="d-md-flex d-lg-none align-items-center d-none">
+        <i class="bi bi-person"></i> <span class="ps-2">Usuário Logado</span>
+        <button onclick="logout()">Logout</button>
+      </div> -->
         <ul>
-          <div id="user-data" class="d-md-flex d-lg-none align-items-center d-none">
-            <i class="bi bi-person"></i> <span class="ps-2 user-name">Usuário Logado</span>
-            <button onclick="logout()">Logout</button>
-          </div>
           <li><a href="index.html">Página Inicial</a></li>
           <li class="dropdown">
             <a href="index.html?cg=all"><span>Animais</span>
@@ -58,21 +59,24 @@
           <li><a href="about.html">Sobre Nós</a></li>
           <li><a href="denounce.html">Denúncia</a></li>
           <li><a href="login.html">Login</a></li>
+          <li id="user-data" class="d-md-flex d-lg-none align-items-center justify-content-center d-none mt-4"> <i
+              class="bi bi-person"></i> <span class="px-2 user-name">Usuário Logado</span>
+            <button onclick="logout()" class="btn btn-secondary mr-2">Logout</button>
+          </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <div id="user-data" class="d-md-none d-sm-none d-lg-flex align-items-center d-none">
-        <i class="bi bi-person"></i> <span class="px-2 user-name">Usuário Logado</span>
-        <button onclick="logout()" class="btn btn-secondary mr-2">Logout</button>
-      </div>
       <div class="header-social-links">
         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
+      <div id="user-data" class="d-md-none d-sm-none d-lg-flex align-items-center d-none">
+        <i class="bi bi-person"></i> <span class="px-2 user-name">Usuário Logado</span>
+        <button onclick="logout()" class="btn btn-secondary mr-2">Logout</button>
+      </div>
     </div>
   </header>
-
   <main class="main">
     <!-- Page Title -->
     <div class="page-title">
@@ -127,6 +131,25 @@
         </div>
       </div>
   </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Con Animal - MIT</strong> <span>All Rights
+          Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> and modified by <strong>Maria Isabel
+          Tochetto</strong>
+        <br>
+        <span>Back-end developed by <strong>Maria Isabel Tochetto</strong></span>
+      </div>
+    </div>
+
+  </footer>
 
   <script src="../js/loggedIn.js"></script>
   <script src="../js/detailsAnimal.js"></script>
