@@ -48,7 +48,7 @@ async function loadAnimals() {
 
         <hr>
 
-        <a href="blog-details.html" class="readmore"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+        <a href="detailsAnimal.html?id=${animal._id}"" class="readmore"><span>Mais Detalhes</span><i class="bi bi-arrow-right"></i></a>
         <div class="text-center mt-2">
         <a href="editAnimal.html?id=${animal._id}" class="button edit-btn btn btn-primary"><i class="bi bi-pencil"></i> Editar</a>
         <button onclick="deleteAnimal('${animal._id}')" class="delete-btn btn btn-secondary"> <i class="bi bi-trash"></i> Deletar</button>
@@ -90,7 +90,7 @@ async function loadAnimals() {
 
         <hr>
 
-        <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+        <a href="detailsAnimal.html?id=${animal._id}"" class="readmore"><span>Mais Detalhes</span><i class="bi bi-arrow-right"></i></a>
       </div>
       </article>
         `;

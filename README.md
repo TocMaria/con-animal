@@ -2,13 +2,13 @@
 Projeto TCC
 
 TO-DO:
-Tela detalhes do animal
 Header não abre menu em telas pequenas
 Equalizar telas
 
 
 Fazer querys .count para ter um institucional dinamico (Quantidade em lar, atendimentos do mês, adotados)
 + Como doar
+Adicionar thumbs no carrosel da pag de detalhes
 
 Extras:
 Filtro por Status e decidir quais status o deslogado pode ver

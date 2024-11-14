@@ -49,7 +49,7 @@ async function loadAnimalData() {
     animalData.veterinary_records.forEach((record, index) => {
       const recordDiv = document.createElement("div");
       recordDiv.classList.add("veterinary-records");
-      record.date = formatDateToInput(record.date);
+      record.date = record.date ? formatDateToInput(record.date) : null;
 
       console.log("veterinary_records${index}[type]");
 
