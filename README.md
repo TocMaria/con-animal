@@ -6,7 +6,7 @@ O **ConAnimal** é uma plataforma desenvolvida para facilitar a gestão de anima
 ## Tecnologias
 - **MongoDB** (banco de dados)
 - **Node.js** (backend)
-- **Express** (framework)
+- **Bootstrap** (framework)
 - **Multer** (upload de imagens)
 - **MVC** (padrão de arquitetura)
 
