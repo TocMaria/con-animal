@@ -1,28 +1,42 @@
-# con-animal
-Projeto TCC
+# ConAnimal 
 
-TO-DO:
-Header não abre menu em telas pequenas
-Equalizar telas
+## Descrição
+O **ConAnimal** é uma plataforma desenvolvida para facilitar a gestão de animais resgatados por ONGs, como a Con Animal. A aplicação permite registrar, acompanhar e gerenciar dados de animais em abrigos e lares temporários, incluindo histórico clínico, localização e status de adoção, proporcionando maior transparência e eficiência nas operações da ONG.
 
+## Tecnologias
+- **MongoDB** (banco de dados)
+- **Node.js** (backend)
+- **Express** (framework)
+- **Multer** (upload de imagens)
+- **MVC** (padrão de arquitetura)
 
-Fazer querys .count para ter um institucional dinamico (Quantidade em lar, atendimentos do mês, adotados)
-+ Como doar
-Adicionar thumbs no carrosel da pag de detalhes
+## Instalação
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/TocMaria/con-animal.git
+   ```
 
-Extras:
-Filtro por Status e decidir quais status o deslogado pode ver
-Adicionar mais infos no card
-Limitar tamanho de img perfil
-Verificar possibilidade de trazer gráficos do mongoDB
-Guardar registro de data quando muda status do animal (Para ter dado de quantos foram adotados em X tempo.)-Refletir mais sobre a ideia
+2. **Navegue até o diretório do projeto:**
+   ```bash
+   cd conanimal
+   ```
 
-Criar mais usuários e marcar logs de quem criou e quem editou
-Criar 'perfil' para quem tá dando lar apenas para ter tag no registro animal para vincular
-Adicionar informaçoes adotante
-Guardar registros de mudança de tutoria, exemplo "Tava com a Rose, foi adotado por Fabiana" mas com um sentido mais de guardar valores anteriores do campo
-Possibilitar que usuários de fora com um link com ID consigam editar o animal
-Funçoes com calculos de gastos fixos (ex: de acordo com o peso do animal qto de raçao ele gasta por mes)
-Incentivo ao "Apadrinhamento" (Me pague um banho! Compre saches! )
- '-Criar logar com rede social caso queira q a doaçao nao seja anonima
-Abrir o livro do 'Financeiro' dividas e qto de doaçao entrou
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+4. **Conecte-se ao MongoDB:**  
+   Para criar uma conta e configurar o cluster, siga o tutorial em: [MongoDB Atlas - Tutorial](https://www.mongodb.com/pt-br/docs/atlas/)
+
+5. **Configure o arquivo `.env`:**  
+   Defina as variáveis de ambiente necessárias (ex: URL do MongoDB, credenciais de API, etc.).
+
+6. **Execute o servidor:**  
+   Para rodar a aplicação, execute o comando:
+   ```bash
+   node server.js
+   ```
+
+## Contribuições
+Se você quiser contribuir para o projeto, sinta-se à vontade para enviar pull requests ou abrir issues com sugestões e melhorias.
