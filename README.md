@@ -6,7 +6,7 @@ O **ConAnimal** é uma plataforma desenvolvida para facilitar a gestão de anima
 ## Tecnologias
 - **MongoDB** (banco de dados)
 - **Node.js** (backend)
-- **Bootstrap** (framework)
+- **Bootstrap** (templates)
 - **Multer** (upload de imagens)
 - **MVC** (padrão de arquitetura)
 
@@ -29,8 +29,8 @@ O **ConAnimal** é uma plataforma desenvolvida para facilitar a gestão de anima
 4. **Conecte-se ao MongoDB:**  
    Para criar uma conta e configurar o cluster, siga o tutorial em: [MongoDB Atlas - Tutorial](https://www.mongodb.com/pt-br/docs/atlas/)
 
-5. **Configure o arquivo `.env`:**  
-   Defina as variáveis de ambiente necessárias (ex: URL do MongoDB, credenciais de API, etc.).
+5. **Configure o arquivo `.env` na pasta raiz do repositório (con-animal):**  
+   Defina as variáveis de ambiente necessárias (ex: URL do MongoDB, credenciais de API).
 
 6. **Execute o servidor:**  
    Para rodar a aplicação, execute o comando:
@@ -38,5 +38,5 @@ O **ConAnimal** é uma plataforma desenvolvida para facilitar a gestão de anima
    node server.js
    ```
 
-## Contribuições
-Se você quiser contribuir para o projeto, sinta-se à vontade para enviar pull requests ou abrir issues com sugestões e melhorias.
+
+Projeto entregue ao Curso EaD de Bacharelado em Engenharia de Software como pré-requisito obrigatório à obtenção do título de Bacharel em Engenharia de Software.
