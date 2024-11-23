@@ -46,6 +46,10 @@ async function loadAnimals() {
           </div>
         </div>
 
+        <p>
+        ${animal.history}
+        </p>
+
         <hr>
 
         <a href="detailsAnimal.html?id=${animal._id}"" class="readmore"><span>Mais Detalhes</span><i class="bi bi-arrow-right"></i></a>
@@ -85,7 +89,7 @@ async function loadAnimals() {
         </div>
 
         <p>
-          Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
+        ${animal.history}
         </p>
 
         <hr>
